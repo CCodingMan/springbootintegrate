@@ -1,0 +1,47 @@
+#开发配置
+spring:
+  profiles:
+    active: dev
+
+#公共配置与profiles选择无关
+mybatis:
+  type-aliases-package: com.ljj.springbootdemo.entity
+  mapper-locations: classpath:mapper/*.xml
+
+logging:
+  level:
+    root: info
+    com.ljj.springbootdemo: debug
+  path: ./log
+  file: springbootintegrate.log
+  pattern:
+    console: "%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+    file: "%d{yyyy/MM/dd-HH:mm} [%thread] %-5level %logger- %msg%n"
+
+---
+
+#开发配置
+spring:
+  profiles: dev
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_boot?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+
+---
+
+#生产配置
+spring:
+  profiles: product
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_boot?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource

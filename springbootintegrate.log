@@ -1,0 +1,31 @@
+2019/02/11-17:46 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Starting SpringbootdemoApplication on DESKTOP-0R2GESS with PID 4364 (G:\spring\springbootintegrate\target\classes started by 26939 in G:\spring\springbootintegrate)
+2019/02/11-17:46 [main] DEBUG com.ljj.springbootdemo.SpringbootdemoApplication- Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019/02/11-17:46 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- The following profiles are active: dev
+2019/02/11-17:46 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/02/11-17:46 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019/02/11-17:46 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$39e5085a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/02/11-17:46 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/02/11-17:46 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/02/11-17:46 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019/02/11-17:46 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JDK\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\python3.7\Scripts\;D:\python3.7\;G:\JDK\jdk8\bin;G:\JDK\jdk8\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;G:\maven\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;G:\svn\bin;D:\ffmpeg\ffmpeg-4.0.2-win64-static\bin;G:\TortoiseSVN\bin;G:\git\Git\cmd;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;D:\VSCodeUser\Microsoft VS Code\bin;G:\Gradle\gradle-4.10-all\gradle-4.10\bin;;.]
+2019/02/11-17:46 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/02/11-17:46 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 1375 ms
+2019/02/11-17:46 [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+2019/02/11-17:46 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/02/11-17:46 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/02/11-17:46 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/02/11-17:46 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/02/11-17:46 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/02/11-17:46 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/02/11-17:46 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/02/11-17:46 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/02/11-17:46 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/02/11-17:46 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Started SpringbootdemoApplication in 3.544 seconds (JVM running for 4.467)
+2019/02/11-17:46 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/02/11-17:46 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/02/11-17:46 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 13 ms
+2019/02/11-17:46 [http-nio-8080-exec-1] DEBUG com.ljj.springbootdemo.dao.UserMapper.findById- ==>  Preparing: select * from user where id = ? 
+2019/02/11-17:46 [http-nio-8080-exec-1] DEBUG com.ljj.springbootdemo.dao.UserMapper.findById- ==> Parameters: 2(Integer)
+2019/02/11-17:46 [http-nio-8080-exec-1] DEBUG com.ljj.springbootdemo.dao.UserMapper.findById- <==      Total: 1
