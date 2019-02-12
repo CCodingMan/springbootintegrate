@@ -3,11 +3,7 @@ package com.ljj.springbootdemo.Controller;
 import com.ljj.springbootdemo.entity.User;
 import com.ljj.springbootdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import javax.persistence.Id;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Auther: ljj
@@ -46,5 +42,16 @@ public class UserController {
             , @RequestParam("age") int age){
 
         return userService.insertUser(userName, password, age);
+    }
+
+    /**
+     * 测试 @PathVariable
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "/getUser3/{id}", method = RequestMethod.GET)
+    public User getUser3(@PathVariable int id){
+
+        return userService.selectById(id);
     }
 }

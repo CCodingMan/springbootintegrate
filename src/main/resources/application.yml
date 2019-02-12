@@ -2,6 +2,17 @@
 spring:
   profiles:
     active: dev
+  freemarker:
+    cache: false
+    template-loader-path: classpath:/templates
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html; charset=utf-8
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: true
+    suffix: .ftl
+
 
 #公共配置与profiles选择无关
 mybatis:
@@ -34,9 +45,23 @@ spring:
 
 ---
 
+#测试配置
+spring:
+  profiles: test
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_boot?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+
+---
+
 #生产配置
 spring:
-  profiles: product
+  profiles: prod
 
   datasource:
     url: jdbc:mysql://localhost:3306/spring_boot?serverTimezone=GMT%2B8

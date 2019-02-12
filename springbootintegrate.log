@@ -1,31 +1,657 @@
-2019/02/11-17:46 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Starting SpringbootdemoApplication on DESKTOP-0R2GESS with PID 4364 (G:\spring\springbootintegrate\target\classes started by 26939 in G:\spring\springbootintegrate)
-2019/02/11-17:46 [main] DEBUG com.ljj.springbootdemo.SpringbootdemoApplication- Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
-2019/02/11-17:46 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- The following profiles are active: dev
-2019/02/11-17:46 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
-2019/02/11-17:46 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
-2019/02/11-17:46 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$39e5085a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019/02/11-17:46 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2019/02/11-17:46 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2019/02/11-17:46 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.14]
-2019/02/11-17:46 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JDK\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\python3.7\Scripts\;D:\python3.7\;G:\JDK\jdk8\bin;G:\JDK\jdk8\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;G:\maven\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;G:\svn\bin;D:\ffmpeg\ffmpeg-4.0.2-win64-static\bin;G:\TortoiseSVN\bin;G:\git\Git\cmd;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;D:\VSCodeUser\Microsoft VS Code\bin;G:\Gradle\gradle-4.10-all\gradle-4.10\bin;;.]
-2019/02/11-17:46 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2019/02/11-17:46 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 1375 ms
-2019/02/11-17:46 [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
-2019/02/11-17:46 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+2019/02/12-11:42 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Starting SpringbootdemoApplication on DESKTOP-0R2GESS with PID 7184 (G:\spring\springbootintegrate\target\classes started by 26939 in G:\spring\springbootintegrate)
+2019/02/12-11:42 [main] DEBUG com.ljj.springbootdemo.SpringbootdemoApplication- Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019/02/12-11:42 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- The following profiles are active: dev
+2019/02/12-11:42 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/02/12-11:42 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
+2019/02/12-11:42 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b68c5f48] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/02/12-11:42 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/02/12-11:42 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/02/12-11:42 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019/02/12-11:42 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JDK\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\python3.7\Scripts\;D:\python3.7\;G:\JDK\jdk8\bin;G:\JDK\jdk8\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;G:\maven\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;G:\svn\bin;D:\ffmpeg\ffmpeg-4.0.2-win64-static\bin;G:\TortoiseSVN\bin;G:\git\Git\cmd;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;D:\VSCodeUser\Microsoft VS Code\bin;G:\Gradle\gradle-4.10-all\gradle-4.10\bin;;.]
+2019/02/12-11:42 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/02/12-11:42 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 4593 ms
+2019/02/12-11:42 [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+2019/02/12-11:42 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019/02/11-17:46 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
-2019/02/11-17:46 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
-2019/02/11-17:46 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019/02/11-17:46 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019/02/11-17:46 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019/02/11-17:46 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2019/02/11-17:46 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019/02/11-17:46 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2019/02/11-17:46 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Started SpringbootdemoApplication in 3.544 seconds (JVM running for 4.467)
-2019/02/11-17:46 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019/02/11-17:46 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2019/02/11-17:46 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 13 ms
-2019/02/11-17:46 [http-nio-8080-exec-1] DEBUG com.ljj.springbootdemo.dao.UserMapper.findById- ==>  Preparing: select * from user where id = ? 
-2019/02/11-17:46 [http-nio-8080-exec-1] DEBUG com.ljj.springbootdemo.dao.UserMapper.findById- ==> Parameters: 2(Integer)
-2019/02/11-17:46 [http-nio-8080-exec-1] DEBUG com.ljj.springbootdemo.dao.UserMapper.findById- <==      Total: 1
+2019/02/12-11:42 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/02/12-11:42 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/02/12-11:42 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/02/12-11:42 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/02/12-11:42 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/02/12-11:42 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/02/12-11:42 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/02/12-11:42 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/02/12-11:42 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Started SpringbootdemoApplication in 12.234 seconds (JVM running for 15.174)
+2019/02/12-11:42 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/02/12-11:42 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/02/12-11:42 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 13 ms
+2019/02/12-11:42 [http-nio-8080-exec-1] ERROR freemarker.runtime- Error executing FreeMarker template
+freemarker.core.NonHashException: For "." left-hand operand: Expected a hash, but this has evaluated to a string (wrapper: f.t.SimpleScalar):
+==> exception  [in template "freemarker/error.ftl" at line 10, column 8]
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${exception.message}  [in template "freemarker/error.ftl" at line 10, column 6]
+----
+	at freemarker.core.Dot._eval(Dot.java:48)
+	at freemarker.core.Expression.eval(Expression.java:83)
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63)
+	at freemarker.core.Environment.visit(Environment.java:330)
+	at freemarker.core.Environment.visit(Environment.java:336)
+	at freemarker.core.Environment.process(Environment.java:309)
+	at freemarker.template.Template.process(Template.java:384)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:389)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:302)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:253)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:178)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019/02/12-11:42 [http-nio-8080-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is freemarker.core.NonHashException: For "." left-hand operand: Expected a hash, but this has evaluated to a string (wrapper: f.t.SimpleScalar):
+==> exception  [in template "freemarker/error.ftl" at line 10, column 8]
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${exception.message}  [in template "freemarker/error.ftl" at line 10, column 6]
+----] with root cause
+freemarker.core.NonHashException: For "." left-hand operand: Expected a hash, but this has evaluated to a string (wrapper: f.t.SimpleScalar):
+==> exception  [in template "freemarker/error.ftl" at line 10, column 8]
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${exception.message}  [in template "freemarker/error.ftl" at line 10, column 6]
+----
+	at freemarker.core.Dot._eval(Dot.java:48)
+	at freemarker.core.Expression.eval(Expression.java:83)
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63)
+	at freemarker.core.Environment.visit(Environment.java:330)
+	at freemarker.core.Environment.visit(Environment.java:336)
+	at freemarker.core.Environment.process(Environment.java:309)
+	at freemarker.template.Template.process(Template.java:384)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:389)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:302)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:253)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:178)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019/02/12-11:42 [http-nio-8080-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] threw exception
+javax.servlet.ServletException: Cannot expose request attribute 'exception' because of an existing model object of the same name
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:123)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:580)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:516)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:388)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019/02/12-11:42 [http-nio-8080-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost]- Exception Processing ErrorPage[errorCode=0, location=/error]
+javax.servlet.ServletException: Cannot expose request attribute 'exception' because of an existing model object of the same name
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:123)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:580)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:516)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:388)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019/02/12-11:44 [http-nio-8080-exec-2] ERROR freemarker.runtime- Error executing FreeMarker template
+freemarker.core.NonHashException: For "." left-hand operand: Expected a hash, but this has evaluated to a string (wrapper: f.t.SimpleScalar):
+==> exception  [in template "freemarker/error.ftl" at line 10, column 8]
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${exception.message}  [in template "freemarker/error.ftl" at line 10, column 6]
+----
+	at freemarker.core.Dot._eval(Dot.java:48)
+	at freemarker.core.Expression.eval(Expression.java:83)
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63)
+	at freemarker.core.Environment.visit(Environment.java:330)
+	at freemarker.core.Environment.visit(Environment.java:336)
+	at freemarker.core.Environment.process(Environment.java:309)
+	at freemarker.template.Template.process(Template.java:384)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:389)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:302)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:253)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:178)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019/02/12-11:44 [http-nio-8080-exec-2] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is freemarker.core.NonHashException: For "." left-hand operand: Expected a hash, but this has evaluated to a string (wrapper: f.t.SimpleScalar):
+==> exception  [in template "freemarker/error.ftl" at line 10, column 8]
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${exception.message}  [in template "freemarker/error.ftl" at line 10, column 6]
+----] with root cause
+freemarker.core.NonHashException: For "." left-hand operand: Expected a hash, but this has evaluated to a string (wrapper: f.t.SimpleScalar):
+==> exception  [in template "freemarker/error.ftl" at line 10, column 8]
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${exception.message}  [in template "freemarker/error.ftl" at line 10, column 6]
+----
+	at freemarker.core.Dot._eval(Dot.java:48)
+	at freemarker.core.Expression.eval(Expression.java:83)
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63)
+	at freemarker.core.Environment.visit(Environment.java:330)
+	at freemarker.core.Environment.visit(Environment.java:336)
+	at freemarker.core.Environment.process(Environment.java:309)
+	at freemarker.template.Template.process(Template.java:384)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:389)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:302)
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:253)
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:178)
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019/02/12-11:44 [http-nio-8080-exec-2] ERROR org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView- Cannot render error page for request [/user/getUser] and exception [/ by zero] as the response has already been committed. As a result, the response may have the wrong status code.
+2019/02/12-11:53 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Starting SpringbootdemoApplication on DESKTOP-0R2GESS with PID 11588 (G:\spring\springbootintegrate\target\classes started by 26939 in G:\spring\springbootintegrate)
+2019/02/12-11:53 [main] DEBUG com.ljj.springbootdemo.SpringbootdemoApplication- Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019/02/12-11:53 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- The following profiles are active: dev
+2019/02/12-11:53 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/02/12-11:53 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019/02/12-11:53 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a78dc64c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/02/12-11:53 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/02/12-11:53 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/02/12-11:53 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019/02/12-11:53 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JDK\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\python3.7\Scripts\;D:\python3.7\;G:\JDK\jdk8\bin;G:\JDK\jdk8\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;G:\maven\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;G:\svn\bin;D:\ffmpeg\ffmpeg-4.0.2-win64-static\bin;G:\TortoiseSVN\bin;G:\git\Git\cmd;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;D:\VSCodeUser\Microsoft VS Code\bin;G:\Gradle\gradle-4.10-all\gradle-4.10\bin;;.]
+2019/02/12-11:53 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/02/12-11:53 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 1308 ms
+2019/02/12-11:53 [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+2019/02/12-11:53 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/02/12-11:53 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/02/12-11:53 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/02/12-11:53 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/02/12-11:53 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/02/12-11:53 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/02/12-11:53 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/02/12-11:53 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/02/12-11:53 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/02/12-11:53 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Started SpringbootdemoApplication in 3.365 seconds (JVM running for 4.235)
+2019/02/12-11:53 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/02/12-11:53 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/02/12-11:53 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 12 ms
+2019/02/12-11:53 [http-nio-8080-exec-1] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver- Failure in @ExceptionHandler public java.lang.Object com.ljj.springbootdemo.exception.StudyExceptionHandler.errorHandler(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Exception,org.springframework.ui.ModelMap) throws java.lang.Exception
+java.lang.IllegalStateException: Could not resolve parameter [3] in public java.lang.Object com.ljj.springbootdemo.exception.StudyExceptionHandler.errorHandler(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.Exception,org.springframework.ui.ModelMap) throws java.lang.Exception: No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:163)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:412)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:136)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1297)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1109)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019/02/12-11:53 [http-nio-8080-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ArithmeticException: / by zero] with root cause
+java.lang.ArithmeticException: / by zero
+	at com.ljj.springbootdemo.Controller.UserController.getUser(UserController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019/02/12-11:57 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Starting SpringbootdemoApplication on DESKTOP-0R2GESS with PID 11484 (G:\spring\springbootintegrate\target\classes started by 26939 in G:\spring\springbootintegrate)
+2019/02/12-11:57 [main] DEBUG com.ljj.springbootdemo.SpringbootdemoApplication- Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019/02/12-11:57 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- The following profiles are active: dev
+2019/02/12-11:57 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/02/12-11:57 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019/02/12-11:57 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2077afe8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/02/12-11:57 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/02/12-11:57 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/02/12-11:57 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019/02/12-11:57 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JDK\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\python3.7\Scripts\;D:\python3.7\;G:\JDK\jdk8\bin;G:\JDK\jdk8\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;G:\maven\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;G:\svn\bin;D:\ffmpeg\ffmpeg-4.0.2-win64-static\bin;G:\TortoiseSVN\bin;G:\git\Git\cmd;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;D:\VSCodeUser\Microsoft VS Code\bin;G:\Gradle\gradle-4.10-all\gradle-4.10\bin;;.]
+2019/02/12-11:57 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/02/12-11:57 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 1564 ms
+2019/02/12-11:57 [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+2019/02/12-11:57 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/02/12-11:57 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/02/12-11:57 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/02/12-11:57 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/02/12-11:57 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/02/12-11:57 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/02/12-11:57 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/02/12-11:57 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/02/12-11:57 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/02/12-11:57 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Started SpringbootdemoApplication in 3.557 seconds (JVM running for 4.415)
+2019/02/12-11:57 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/02/12-11:57 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/02/12-11:57 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 10 ms
+2019/02/12-11:58 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Starting SpringbootdemoApplication on DESKTOP-0R2GESS with PID 8156 (G:\spring\springbootintegrate\target\classes started by 26939 in G:\spring\springbootintegrate)
+2019/02/12-11:58 [main] DEBUG com.ljj.springbootdemo.SpringbootdemoApplication- Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019/02/12-11:58 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- The following profiles are active: dev
+2019/02/12-11:58 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/02/12-11:58 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
+2019/02/12-11:58 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2c075122] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/02/12-11:58 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/02/12-11:59 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/02/12-11:59 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019/02/12-11:59 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JDK\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\python3.7\Scripts\;D:\python3.7\;G:\JDK\jdk8\bin;G:\JDK\jdk8\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;G:\maven\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;G:\svn\bin;D:\ffmpeg\ffmpeg-4.0.2-win64-static\bin;G:\TortoiseSVN\bin;G:\git\Git\cmd;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;D:\VSCodeUser\Microsoft VS Code\bin;G:\Gradle\gradle-4.10-all\gradle-4.10\bin;;.]
+2019/02/12-11:59 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/02/12-11:59 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 1502 ms
+2019/02/12-11:59 [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+2019/02/12-11:59 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/02/12-11:59 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/02/12-11:59 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/02/12-11:59 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/02/12-11:59 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/02/12-11:59 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/02/12-11:59 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/02/12-11:59 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/02/12-11:59 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/02/12-11:59 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Started SpringbootdemoApplication in 3.487 seconds (JVM running for 4.486)
+2019/02/12-11:59 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/02/12-11:59 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/02/12-11:59 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 6 ms
+2019/02/12-11:59 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Starting SpringbootdemoApplication on DESKTOP-0R2GESS with PID 16280 (G:\spring\springbootintegrate\target\classes started by 26939 in G:\spring\springbootintegrate)
+2019/02/12-11:59 [main] DEBUG com.ljj.springbootdemo.SpringbootdemoApplication- Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019/02/12-11:59 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- The following profiles are active: dev
+2019/02/12-11:59 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/02/12-11:59 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019/02/12-11:59 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$28203ed5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/02/12-11:59 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/02/12-11:59 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/02/12-11:59 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019/02/12-11:59 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JDK\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\python3.7\Scripts\;D:\python3.7\;G:\JDK\jdk8\bin;G:\JDK\jdk8\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;G:\maven\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;G:\svn\bin;D:\ffmpeg\ffmpeg-4.0.2-win64-static\bin;G:\TortoiseSVN\bin;G:\git\Git\cmd;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;D:\VSCodeUser\Microsoft VS Code\bin;G:\Gradle\gradle-4.10-all\gradle-4.10\bin;;.]
+2019/02/12-11:59 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/02/12-11:59 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 1333 ms
+2019/02/12-11:59 [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+2019/02/12-11:59 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/02/12-11:59 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/02/12-11:59 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/02/12-11:59 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/02/12-11:59 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/02/12-11:59 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/02/12-11:59 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/02/12-11:59 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/02/12-11:59 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/02/12-11:59 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Started SpringbootdemoApplication in 3.376 seconds (JVM running for 4.247)
+2019/02/12-14:35 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Starting SpringbootdemoApplication on DESKTOP-0R2GESS with PID 8460 (G:\spring\springbootintegrate\target\classes started by 26939 in G:\spring\springbootintegrate)
+2019/02/12-14:35 [main] DEBUG com.ljj.springbootdemo.SpringbootdemoApplication- Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019/02/12-14:35 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- The following profiles are active: dev
+2019/02/12-14:35 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/02/12-14:35 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019/02/12-14:35 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4c8cea98] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/02/12-14:35 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/02/12-14:35 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/02/12-14:35 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019/02/12-14:35 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JDK\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\python3.7\Scripts\;D:\python3.7\;G:\JDK\jdk8\bin;G:\JDK\jdk8\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;G:\maven\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;G:\svn\bin;D:\ffmpeg\ffmpeg-4.0.2-win64-static\bin;G:\TortoiseSVN\bin;G:\git\Git\cmd;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;D:\VSCodeUser\Microsoft VS Code\bin;G:\Gradle\gradle-4.10-all\gradle-4.10\bin;;.]
+2019/02/12-14:35 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/02/12-14:35 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 5700 ms
+2019/02/12-14:35 [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+2019/02/12-14:35 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/02/12-14:35 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/02/12-14:35 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/02/12-14:35 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/02/12-14:35 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/02/12-14:35 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/02/12-14:35 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/02/12-14:35 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/02/12-14:35 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/02/12-14:35 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Started SpringbootdemoApplication in 15.449 seconds (JVM running for 19.133)
+2019/02/12-14:37 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/02/12-14:37 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/02/12-14:37 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 8 ms
+2019/02/12-14:37 [http-nio-8080-exec-1] DEBUG com.ljj.springbootdemo.dao.UserMapper.findById- ==>  Preparing: select * from user where id = ? 
+2019/02/12-14:37 [http-nio-8080-exec-1] DEBUG com.ljj.springbootdemo.dao.UserMapper.findById- ==> Parameters: 1(Integer)
+2019/02/12-14:37 [http-nio-8080-exec-1] DEBUG com.ljj.springbootdemo.dao.UserMapper.findById- <==      Total: 1
+2019/02/12-14:49 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Starting SpringbootdemoApplication on DESKTOP-0R2GESS with PID 12828 (G:\spring\springbootintegrate\target\classes started by 26939 in G:\spring\springbootintegrate)
+2019/02/12-14:49 [main] DEBUG com.ljj.springbootdemo.SpringbootdemoApplication- Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2019/02/12-14:49 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- The following profiles are active: dev
+2019/02/12-14:49 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data repositories in DEFAULT mode.
+2019/02/12-14:49 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019/02/12-14:49 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2077afe8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019/02/12-14:49 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2019/02/12-14:49 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2019/02/12-14:49 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019/02/12-14:49 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JDK\jdk8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\python3.7\Scripts\;D:\python3.7\;G:\JDK\jdk8\bin;G:\JDK\jdk8\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;G:\maven\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;G:\svn\bin;D:\ffmpeg\ffmpeg-4.0.2-win64-static\bin;G:\TortoiseSVN\bin;G:\git\Git\cmd;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;C:\Users\26939\AppData\Local\Microsoft\WindowsApps;D:\VSCodeUser\Microsoft VS Code\bin;G:\Gradle\gradle-4.10-all\gradle-4.10\bin;;.]
+2019/02/12-14:49 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2019/02/12-14:49 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 1362 ms
+2019/02/12-14:49 [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+2019/02/12-14:49 [main] INFO  org.hibernate.jpa.internal.util.LogHelper- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019/02/12-14:49 [main] INFO  org.hibernate.Version- HHH000412: Hibernate Core {5.3.7.Final}
+2019/02/12-14:49 [main] INFO  org.hibernate.cfg.Environment- HHH000206: hibernate.properties not found
+2019/02/12-14:49 [main] INFO  org.hibernate.annotations.common.Version- HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019/02/12-14:49 [main] INFO  org.hibernate.dialect.Dialect- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019/02/12-14:49 [main] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean- Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019/02/12-14:49 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2019/02/12-14:49 [main] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019/02/12-14:49 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2019/02/12-14:49 [main] INFO  com.ljj.springbootdemo.SpringbootdemoApplication- Started SpringbootdemoApplication in 3.379 seconds (JVM running for 4.352)
+2019/02/12-14:49 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019/02/12-14:49 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2019/02/12-14:49 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 7 ms
